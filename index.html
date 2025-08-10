@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./output/output.css">
+  <title>Interactive Pricing Component</title>
+</head>
+
+<body class="relative min-h-screen bg-[var(--main-bg)]">
+  <img src="./images/bg-pattern.svg" alt="Background Image" class="absolute -z-10 min-h-[50vh]">
+  <main class="z-10 flex flex-col items-center justify-center h-screen gap-y-16">
+    <section class="relative flex flex-col items-center gap-y-3">
+      <img src="./images/pattern-circles.svg" alt="A pattern of circles"
+        class="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+      <h1 class="text-[var(--dark-bluish-text)] font-extrabold capitalize text-center text-2xl">Simple, traffic-based
+        pricing</h1>
+      <p class="max-w-[225px] sm:max-w-none text-center">Sign up for our 30-day trial. No credit card required.</p>
+    </section>
+    <section class="bg-[var(--card-bg)] w-[350px] sm:w-[550px] py-10 shadow-2xl rounded-md">
+      <div class="flex flex-col gap-y-8">
+        <div class="flex flex-col items-center px-5 pb-10 border-b sm:px-10 gap-y-10">
+          <div class="flex flex-col gap-y-10">
+            <div class="flex justify-center sm:justify-between sm:items-center">
+              <p class="text-[var(--grayish-text)] font-extrabold uppercase tracking-[0.2em]">
+                <span id="page-views">100</span>
+                pageviews
+              </p>
+              <p class="hidden sm:items-center sm:flex gap-x-3">
+                <strong class="price font-extrabold text-[var(--dark-bluish-text)] text-4xl">$16.00</strong>
+                <span class="period text-[var(--grayish-text)]">/ month</span>
+              </p>
+            </div>
+            <div class="flex flex-col items-center gap-y-10">
+              <input type="range" id="range-slider" min="1" max="5" value="3" step="1" class="range-slider">
+              <p class="flex items-center sm:hidden gap-x-3">
+                <strong class="price font-extrabold text-[var(--dark-bluish-text)] text-4xl">$16.00</strong>
+                <span class="period text-[var(--grayish-text)]">/ month</span>
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center gap-x-2 sm:gap-x-5">
+            <label for="period-slider" class="text-sm text-[var(--grayish-text)]">Monthly Billing</label>
+            <input type="range" id="period-slider" min="1" max="2" value="1" class="period-slider">
+            <label for="period-slider" class="text-sm text-[var(--grayish-text)]">Yearly Billing</label>
+            <p class="text-xs bg-[var(--discount-bg)] rounded-xl p-1 sm:px-3 text-[var(--discount-text)]">-25%
+              <span class="hidden sm:inline">discounted</span>
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col items-center px-5 gap-y-5 sm:flex-row sm:justify-between sm:px-10">
+          <ul>
+            <li class="flex gap-x-4">
+              <img src="images/icon-check.svg" alt="checkmark icon" class="object-contain">
+              <span class="text-[var(--grayish-text)]">Unlimited websites</span>
+            </li>
+            <li class="flex gap-x-4">
+              <img src="images/icon-check.svg" alt="checkmark icon" class="object-contain">
+              <span class="text-[var(--grayish-text)]">100% data ownership</span>
+            </li>
+            <li class="flex gap-x-4">
+              <img src="images/icon-check.svg" alt="checkmark icon" class="object-contain">
+              <span class="text-[var(--grayish-text)]">Email reports</span>
+            </li>
+          </ul>
+          <button
+            class="text-[var(--cta-text)] bg-[var(--dark-bluish-text)] px-8 py-2 rounded-3xl border-2 border-[var(--dark-bluish-text)] hover:bg-transparent hover:text-[var(--dark-bluish-text)] transition-colors duration-300 ease-linear">Start
+            my trial</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="src/script.js"></script>
+</body>
+
+</html>

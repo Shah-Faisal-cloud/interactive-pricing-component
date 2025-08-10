@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+
+    --range-slider-bg: hsl(174, 77%, 80%);
+    --range-slider-thumb-bg: hsl(174, 86%, 45%);
+    --range-slider-thumb-bg-hover: hsl(180, 100%, 40%);
+
+
+
+
+    --discount-bg: hsl(14, 92%, 95%);
+    --discount-text: hsl(15, 100%, 70%);
+
+    --cta-text: hsl(226, 100%, 87%);
+
+    --card-bg: hsl(0, 0%, 100%);
+    --main-bg: hsl(230, 100%, 99%);
+
+    --period-slider-bg: hsl(223, 50%, 87%);
+    --period-slider-thumb-bg: hsl(224, 65%, 95%);
+
+    --grayish-text: hsl(225, 20%, 60%);
+    --dark-bluish-text: hsl(227, 35%, 25%);
+}
+
+body {
+    font-family: 'Manrope';
+    font-size: 15px;
+}
+
+.range-slider {
+    appearance: none;
+    width: 300px;
+    height: 10px;
+    background-color: var(--range-slider-bg);
+    border-radius: 10px;
+    cursor: pointer;
+}
+@media only screen and (min-width: 640px){
+    .range-slider{
+        width: 450px;
+    }
+}
+.range-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    background-color: var(--range-slider-thumb-bg);
+    background-image: url('../images/icon-slider.svg');
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-position: center;
+    border-radius: 50%;
+    transition: all 0.25s ease-in;
+}
+
+.range-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+    background-color: var(--range-slider-thumb-bg-hover);
+}
+.range-slider::-moz-range-thumb {
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    background-color: var(--range-slider-thumb-bg);
+    background-image: url('../images/icon-slider.svg');
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-position: center;
+    border-radius: 50%;
+    transition: all 0.25s ease-in;
+}
+
+.range-slider::-moz-range-thumb:hover {
+    transform: scale(1.1);
+    background-color: var(--range-slider-thumb-bg-hover);
+}
+
+.period-slider{
+    appearance: none;
+    background-color: var(--period-slider-bg);
+    height: 2rem;
+    width: 4rem;
+    border-radius: 1rem;
+    padding: 0 0.25rem;
+    cursor: pointer;
+}
+
+.period-slider::-webkit-slider-thumb{
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--period-slider-thumb-bg);
+    border-radius: 50%;
+}
+.period-slider::-moz-range-thumb{
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--period-slider-thumb-bg);
+    border-radius: 50%;
+}
+
+.period-slider.value-2::-webkit-slider-thumb{
+    background-color: var(--range-slider-thumb-bg);
+}
